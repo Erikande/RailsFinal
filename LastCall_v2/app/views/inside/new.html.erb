@@ -1,0 +1,20 @@
+
+<%= form_for :userplace, url: inside_path do |f| %>
+
+<div>
+<%= f.label :home_address %>
+<%= f.text_field :home_address%>	
+</div>
+
+<div>
+<%= f.label :work_address %>
+<%= f.text_field:work_address %>	
+</div>
+
+<div>
+<%= f.label :play_address %>
+<%= f.text_field :play_address %>	
+</div>
+
+<%= f.submit %>
+<% end %>

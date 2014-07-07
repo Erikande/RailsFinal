@@ -1,0 +1,2 @@
+module QuicktabsHelper
+end

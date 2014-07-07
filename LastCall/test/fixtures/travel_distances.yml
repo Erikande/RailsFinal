@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  near_station_id: MyString
+  distance_walk: MyString
+
+two:
+  near_station_id: MyString
+  distance_walk: MyString

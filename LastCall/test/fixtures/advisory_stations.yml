@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  red_line: MyString
+  orange_line: MyString
+  blue_line: MyString
+  yellow_line: MyString
+  green_line: MyString
+
+two:
+  red_line: MyString
+  orange_line: MyString
+  blue_line: MyString
+  yellow_line: MyString
+  green_line: MyString
