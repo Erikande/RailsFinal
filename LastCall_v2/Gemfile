@@ -26,7 +26,7 @@ gem 'kaminari', '~> 0.15.0'
 gem 'friendly_id', '~> 5.0.2'
 
 # font-awesome
-gem 'font-awesome-sass', '~> 4.0.2'
+gem 'font-awesome-sass', '~> 4.1.0'
 
 # production gems for heroku
 group :production do
@@ -45,6 +45,29 @@ group :development, :test do
 end
 
 gem 'bootstrap-sass', '~> 3.0.3.0'
+
+#simple form
+gem 'simple_form'
+
+#bootstrap forms
+gem 'bootstrap_form'
+
+#wmata
+gem 'pius-wmata-hotfix'
+
+
+
+#httparty  - hash manipulation and consuming
+gem 'httparty'
+
+#hash manipulation and consuming
+gem 'dish'
+
+#rss feed parser
+gem 'feedjira'
+
+#geocoding
+gem "geocoder"
 
 
 # RSpec

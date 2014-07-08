@@ -1,0 +1,20 @@
+<h1>Alerts</h1> 
+
+
+<ul class="list-group"
+ <li  class="list-group-item">
+ <li  class="list-group-item"><i style="color:red;margin-right: 5px"><%= icon('circle-o fa-lg', ) %></i><%= link_to 'Red', :location %><%= @red.incidents %> </li>
+ <li  class="list-group-item"><i style="color:orange;margin-right: 5px"><%= icon('circle-o fa-lg', '', class: 'icon') %></i><%= link_to 'Orange', :location %><%= @orange.incidents %></li>
+ <li  class="list-group-item"><i style="color:blue; margin-right: 5px"><%= icon('circle-o fa-lg', '', class: 'icon') %></i><%= link_to 'Blue', :location %><i style="color:red;margin-right: 5px"></i><%= @blue.incidents %></li>
+ <li  class="list-group-item"><i style="color:red;margin-right: 5px"><%= icon('circle-o fa-lg', ) %></i><%= link_to 'Yellow', :location %><%= @yellow.incidents %> </li>
+ <li  class="list-group-item"><i style="color:green;margin-right: 5px"><%= icon('circle-o fa-lg', ) %></i><%= link_to 'Green', :location %><%= @green.incidents %> </li>
+<!-- #need to add a ternary operator for each of the lines
+#if nil, eg no incidents, show the message "no incidents for this line" 
+#OR if there is an incident, show the description  -->
+
+<!-- Need to add padding between icon and text
+Need to add color for each icon -->
+ </li>
+</ul>
+
+<%= Dish(@response_rss) %>

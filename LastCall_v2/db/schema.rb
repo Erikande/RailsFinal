@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140706223502) do
+ActiveRecord::Schema.define(version: 20140708201524) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -33,9 +33,11 @@ ActiveRecord::Schema.define(version: 20140706223502) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
-  # add_index "user_places", ["user_id"], name: "index_user_places_on_user_id"
+  add_index "user_places", ["user_id"], name: "index_user_places_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "username",               default: "",    null: false
