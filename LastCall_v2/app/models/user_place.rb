@@ -1,14 +1,12 @@
 class UserPlace < ActiveRecord::Base
   require "geocoder"
   belongs_to :user
-  # geocoded_by :full_street_address
-  # after_validation :geocode#, :if => :address_changed?
+  geocoded_by :address
+  after_validation :geocode, :if => :address_changed?
 
 
 # Validations
-  validates :home_address,  presence: true
-  validates :work_address, 	presence: true
-  validates :play_address,	presence: true
+  validates :address,  presence: true
   
   # validates :home_address,
   # :presence => true,

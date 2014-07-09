@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140708201524) do
+ActiveRecord::Schema.define(version: 20140709053938) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -27,14 +27,12 @@ ActiveRecord::Schema.define(version: 20140708201524) do
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
   create_table "user_places", force: true do |t|
-    t.string   "home_address"
-    t.string   "work_address"
-    t.string   "play_address"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "address"
   end
 
   add_index "user_places", ["user_id"], name: "index_user_places_on_user_id"

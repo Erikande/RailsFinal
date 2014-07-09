@@ -25,7 +25,7 @@ class InsideController < ApplicationController
   private
 
 	def place_params
-		params.require(:userplace).permit(:home_address, :work_address, :play_address)	
+		params.require(:userplace).permit(:address)	
 	end
     
 end
