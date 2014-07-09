@@ -69,6 +69,8 @@ gem 'feedjira'
 #geocoding
 gem "geocoder"
 
+gem 'google_places'
+
 
 # RSpec
 group :test, :development do
