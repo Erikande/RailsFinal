@@ -13,6 +13,7 @@ class InsideController < ApplicationController
 
   def create
 	@place = UserPlace.new(place_params)
+  @place.user_id = current_user.id
 	@place.save
 	if @place.save
 		redirect_to inside_path

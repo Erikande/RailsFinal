@@ -5,7 +5,9 @@ class PagesController < ApplicationController
   end
   
   def inside
-  	@places = UserPlace.find(:all, :conditions => 'id > 0')
+  	@places = current_user.user_places
+
+  	# UserPlace.find(:all, :conditions => 'id > 0')
   end 
 
   def show
