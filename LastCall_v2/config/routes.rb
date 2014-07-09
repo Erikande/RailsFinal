@@ -9,6 +9,7 @@ LastCall::Application.routes.draw do
     
   devise_for :users
   resources :inside
+  resources :pages
 
   
   namespace :admin do

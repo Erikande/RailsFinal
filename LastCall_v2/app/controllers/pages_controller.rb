@@ -11,7 +11,14 @@ class PagesController < ApplicationController
   end 
 
   def show
- 
+ 	@place = UserPlace.find(params[:id])
+  end
+
+  def destroy
+  	@place = UserPlace.find(params[:id])
+  	@place.destroy
+
+  	redirect_to inside_path
   end
     
 end

@@ -1,0 +1,15 @@
+<%= bootstrap_form_for :userplace, layout: :inline, url: inside_path do |f| %>
+<%= f.alert_message "Please fix the following errors:" %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@place.errors.count, "error") %></h2>
+    <ul>
+    <% @place.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+
+<%= f.text_field :address %></br><br>	
+<%= f.submit :submit, :append_button => { :label => 'Button label', :icon => 'icon-plus', :type => 'button' } %>	
+
+<% end %>

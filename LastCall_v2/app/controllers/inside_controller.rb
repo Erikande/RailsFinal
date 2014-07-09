@@ -22,6 +22,14 @@ class InsideController < ApplicationController
 	end  
   end
 
+  def show
+    @place = UserPlace.find(params[:id]) 
+  end
+
+  def edit
+    @place = UserPlace.find(params[:id]) 
+  end
+
   private
 
 	def place_params
