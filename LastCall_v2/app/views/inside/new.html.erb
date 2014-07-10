@@ -1,5 +1,6 @@
 
 
+<%= link_to "Back", inside_path, :class => "btn btn-link" %><br>
 
 <%= bootstrap_form_for :userplace, layout: :inline, url: inside_path do |f| %>
 <%= f.alert_message "Please fix the following errors:" %>
@@ -13,6 +14,10 @@
   </div>
 
 <%= f.text_field :address %></br><br>	
-<%= f.submit :submit, :append_button => { :label => 'Button label', :icon => 'icon-plus', :type => 'button' } %>	
+<%= f.submit :submit, :append_button => { :label => 'Button label', :icon => 'icon-plus', :type => 'button' } %>	</br>
+
+
+
+
 
 <% end %>

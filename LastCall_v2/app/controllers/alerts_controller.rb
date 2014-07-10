@@ -5,6 +5,8 @@ class AlertsController < ApplicationController
 	require 'geocoder'
 	require 'dish'
 	require 'geocoder'
+  require 'nokogiri'
+  require 'open-uri'
 
 	
 
@@ -20,10 +22,17 @@ class AlertsController < ApplicationController
   	@green = WMATA.lines[2]
   	@yellow = WMATA.lines[3]
   	@blue = WMATA.lines[4]
-  	
-  	
+
+    doc = Nokogiri::XML(open("http://www.metroalerts.info/rss.aspx"))
+    @links = doc.xpath('//item').map do |i|
+    {  'title' => i.xpath('title').inner_text,
+       'link' => i.xpath('link').inner_text, 
+       'description' => i.xpath('description').inner_text 
+    }
 
 
+
+  	end
   end
 
 end

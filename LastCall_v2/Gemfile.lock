@@ -79,7 +79,6 @@ GEM
     kaminari (0.15.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    libxml-ruby (2.7.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -193,7 +192,7 @@ DEPENDENCIES
   jquery-rails (~> 3.0.4)
   json
   kaminari (~> 0.15.0)
-  libxml-ruby
+  nokogiri
   pg
   pius-wmata-hotfix
   rails (= 4.0.4)

@@ -1,26 +1,29 @@
 <h1>Alerts</h1> 
-
+<!-- 
 
 <ul class="list-group"
  <li  class="list-group-item">
- <li  class="list-group-item"><i style="color:red;margin-right: 10px"><%= icon('circle-o fa-3x', ) %></i><%= link_to 'Red', :location %><span style=" padding-left: 5px">
+ <li  class="list-group-item"><i style="color:red;margin-right: 10px"><%= icon('circle-o fa-3x', ) %></i><%= link_to 'Red', 'http://wmata.com/rail/stations.cfm?rail=rd' %><span style=" padding-left: 5px">
  	<%= @red.incidents %></span> </li>
- <li  class="list-group-item"><i style="color:orange;margin-right: 10px"><%= icon('circle-o fa-3x', '', class: 'icon') %></i><%= link_to 'Orange', :location %><span style=" padding-left: 5px">
+ <li  class="list-group-item"><i style="color:orange;margin-right: 10px"><%= icon('circle-o fa-3x', '', class: 'icon') %></i><%= link_to 'Orange', "http://wmata.com/rail/stations.cfm?rail=or" %><span style=" padding-left: 5px">
  	<%= @orange.incidents %></span></li>
- <li  class="list-group-item"><i style="color:blue; margin-right: 10px"><%= icon('circle-o fa-3x', '', class: 'icon') %></i><%= link_to 'Blue', :location %><i style="color:red;margin-right: 5px"></i><span style=" padding-left: 5px"><%= @blue.incidents %></span></li>
- <li  class="list-group-item"><i style="color:yellow;margin-right: 10px"><%= icon('circle-o fa-3x', ) %></i><%= link_to 'Yellow', :location %><span style=" padding-left: 5px">
+ <li  class="list-group-item"><i style="color:blue; margin-right: 10px"><%= icon('circle-o fa-3x', '', class: 'icon') %></i><%= link_to 'Blue', "http://wmata.com/rail/stations.cfm?rail=bl" %><i style="color:red;margin-right: 5px"></i><span style=" padding-left: 5px"><%= @blue.incidents %></span></li>
+ <li  class="list-group-item"><i style="color:yellow;margin-right: 10px"><%= icon('circle-o fa-3x', ) %></i><%= link_to 'Yellow', "http://wmata.com/rail/stations.cfm?rail=yl" %><span style=" padding-left: 5px">
  	<%= @yellow.incidents %></span> </li>
- <li  class="list-group-item"><i style="color:green;margin-right: 10px"><%= icon('circle-o fa-3x', ) %></i><%= link_to 'Green', :location %><span style=" padding-left: 5px">
+ <li  class="list-group-item"><i style="color:green;margin-right: 10px"><%= icon('circle-o fa-3x', ) %></i><%= link_to 'Green', "http://wmata.com/rail/stations.cfm?rail=gr" %><span style=" padding-left: 5px">
  	<%= @green.incidents %></span> </li>
-<!-- #need to add a ternary operator for each of the lines
-#if nil, eg no incidents, show the message "no incidents for this line" 
-#OR if there is an incident, show the description  -->
 
-<!-- Need to add padding between icon and text
-Need to add color for each icon -->
  </li>
 </ul>
 
-<% @data.each do |feed| %>
-<%= feed['rss'] %>
+<h1>Rss Feed</h1> -->
+
+  <%= debug @links.each.first %>
+<%= link_to "http://www.wmata.com/rider_tools/metro_service_status/rail_Bus.cfm?", class: "btn btn-danger" do %>
+    <i>Go to WMATA.com for more info</i>
 <% end %>
+
+<!-- THIS PAGE IS A WORK IN PROGRESS
+ I'm uisng the Nokogiri <http://nokogiri.org/Nokogiri/XML.html> site scraper to scrape and parse the XML rss feed. At the moment I am only getting one feed at a time.
+
+ -->

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-<h1> Stations that are 5 minutes walk from this address </h1>
+<h2> Stations that are 5 minutes walk from this address </h2>
+
 
 
 
@@ -7,50 +7,35 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <td><h3>Stations</h3></td>
+      <th>Stations</th>
+      <th>Address</th>
     </tr>
   </thead>
   <tbody>
-  <% @areas.each do |area| %><br>
+  <% if @parsed_areas.length > 0 %><br>
+  <% @parsed_areas.each do |area| %>
+  
       <tr>
-        <td><h5><%= area["name"] %></h5><br></td>
+        <td><%= area[:name] %></td>
         <td>
-        	<% area.delete('geometry') %>
-        	<% area.delete('icon') %>
-        	<% area.delete('id') %>
-        	<% area.delete('name') %>
-        	<% area.delete('place_id') %>
-        	<% area.delete('reference') %>
-        	<% area.delete('scope') %>
-        	<% area.delete('types') %>
-        	<% area.delete('vicinity') %>
+        <%= area[:vicinity] %>
         </td>
       </tr>
     <% end %>
+    <% else %>
+  <div style=" margin-left: auto;margin-right: auto;width: 70%;"class="alert alert-danger alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+  There are no metro stations within 5 minutes walking distance of this location.
+  </div>
+<% end %>
   </tbody>
-</table></br></br>
-
-
+</table>
+</br>
+</br>
 
 <h4>Opening & Closing times<span class="label label-default" style=" margin-bottom: 50px"></span></h4></br>
 <h4><span class="label label-success">5 am Weekdays | 7 am Weekends</span></h4><h4><span class="label label-danger">12 am Sun-Thur | 3 am Fri-Sat</span></h4>
 </i></br></br></br>
 
 <%= link_to 'WMTA.com for more Info', "http://www.wmata.com/rail/?", :class => 'btn btn-primary' %>
-=======
-<h1>This is the sho!x</h1><br>
 
-
-<h4><%= @place.address%></h4>
-<h5>Stations that are 5 minutes walk from this address</h5>
-<% if @parsed_areas.length > 0 %>
-<% @parsed_areas.each do |area| %>
-	<p>
-		Station: <%= area[:name] %><br>
-		Address: <%= area[:vicinity] %><br>
-	</p>
-<% end %>
-<% else %>
-	<p>There are no metro stations within 5 minutes walking distance of this location.</p>
-<% end %>
->>>>>>> a2dc7550f538e8a0ed6243cea65f457394d66efd
