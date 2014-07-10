@@ -1,4 +1,18 @@
 <h1>This is the sho!x</h1><br>
 
 
-<h4><%= @place.address%></h4>
+<h4><%= @place.address%></h4><br>
+<h5>Stations that are 5 minutes walk from this address</h5>
+<%= @areas.each do |area| %>
+	Station: <%= area["name"] %><br>
+	Station: <%= area["vicinity"]['@lat'] %><br>
+	<% area.delete('geometry') %>
+	<% area.delete('icon') %>
+	<% area.delete('id') %>
+	<% area.delete('name') %>
+	<% area.delete('place_id') %>
+	<% area.delete('reference') %>
+	<% area.delete('scope') %>
+	<% area.delete('types') %>
+	<% area.delete('vicinity') %>
+<% end %>

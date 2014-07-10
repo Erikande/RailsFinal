@@ -25,6 +25,7 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    addressable (2.3.6)
     arel (4.0.2)
     bcrypt (3.1.7)
     bcrypt-ruby (3.1.5)
@@ -69,8 +70,6 @@ GEM
     friendly_id (5.0.4)
       activerecord (>= 4.0.0)
     geocoder (1.2.2)
-    google_places (0.21.0)
-      httparty
     hike (1.2.3)
     httparty (0.13.1)
       json (~> 1.8)
@@ -96,6 +95,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    netrc (0.7.7)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
@@ -127,6 +127,8 @@ GEM
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    rest_client (1.7.3)
+      netrc (~> 0.7.7)
     rspec-core (2.14.8)
     rspec-expectations (2.14.5)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -184,6 +186,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  addressable
   bcrypt-ruby (~> 3.1.2)
   bootstrap-sass (~> 3.0.3.0)
   bootstrap_form
@@ -196,16 +199,17 @@ DEPENDENCIES
   font-awesome-sass (~> 4.1.0)
   friendly_id (~> 5.0.2)
   geocoder
-  google_places
   httparty
   jbuilder (~> 1.5.3)
   jquery-rails (~> 3.0.4)
+  json
   kaminari (~> 0.15.0)
   pg
   pius-wmata-hotfix
   rails (= 4.0.4)
   rails_12factor
   rails_layout (~> 0.5.11)
+  rest_client
   rspec-rails (~> 2.14.1)
   sass-rails (~> 4.0.1)
   sdoc
