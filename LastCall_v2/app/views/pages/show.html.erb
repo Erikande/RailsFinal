@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1> Stations that are 5 minutes walk from this address </h1>
 
 
@@ -36,3 +37,20 @@
 </i></br></br></br>
 
 <%= link_to 'WMTA.com for more Info', "http://www.wmata.com/rail/?", :class => 'btn btn-primary' %>
+=======
+<h1>This is the sho!x</h1><br>
+
+
+<h4><%= @place.address%></h4>
+<h5>Stations that are 5 minutes walk from this address</h5>
+<% if @parsed_areas.length > 0 %>
+<% @parsed_areas.each do |area| %>
+	<p>
+		Station: <%= area[:name] %><br>
+		Address: <%= area[:vicinity] %><br>
+	</p>
+<% end %>
+<% else %>
+	<p>There are no metro stations within 5 minutes walking distance of this location.</p>
+<% end %>
+>>>>>>> a2dc7550f538e8a0ed6243cea65f457394d66efd
