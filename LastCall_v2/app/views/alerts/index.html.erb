@@ -21,4 +21,6 @@ Need to add color for each icon -->
  </li>
 </ul>
 
-<%= Dish(@response_rss) %>
+<% @data.each do |feed| %>
+<%= feed['rss'] %>
+<% end %>

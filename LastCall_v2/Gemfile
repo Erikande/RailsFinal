@@ -70,8 +70,6 @@ gem "geocoder"
 
 gem 'rest_client'
 gem 'json'
-gem "addressable"
-
 
 
 

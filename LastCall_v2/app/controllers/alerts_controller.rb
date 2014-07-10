@@ -5,8 +5,6 @@ class AlertsController < ApplicationController
 	require 'geocoder'
 	require 'dish'
 	require 'geocoder'
-  require 'json'
-  require 'rest-client'
 
 	
 
@@ -14,7 +12,7 @@ class AlertsController < ApplicationController
   def index
   	@response = HTTParty.get('http://api.wmata.com/Incidents.svc/json/Incidents?api_key=ecunuygraksb9hdkydw8p6r3')
   	@response_rss = HTTParty.get 'http://www.wmata.com/rider_tools/metro_service_status/feeds/rail_Advisories.xml?n'
-  	# @parse = JSON.parse(@response.body)
+    @data = @response_rss.parsed_response
   	WMATA.api_key = 'ecunuygraksb9hdkydw8p6r3'
 
   	@red = WMATA.lines[0]
