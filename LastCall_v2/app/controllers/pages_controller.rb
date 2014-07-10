@@ -22,6 +22,7 @@ class PagesController < ApplicationController
     @response = JSON.parse(RestClient.get @uri)
     @areas = @response['results']
 
+
   end
 
 

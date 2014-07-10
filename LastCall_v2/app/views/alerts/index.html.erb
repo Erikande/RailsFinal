@@ -3,11 +3,15 @@
 
 <ul class="list-group"
  <li  class="list-group-item">
- <li  class="list-group-item"><i style="color:red;margin-right: 5px"><%= icon('circle-o fa-lg', ) %></i><%= link_to 'Red', :location %><%= @red.incidents %> </li>
- <li  class="list-group-item"><i style="color:orange;margin-right: 5px"><%= icon('circle-o fa-lg', '', class: 'icon') %></i><%= link_to 'Orange', :location %><%= @orange.incidents %></li>
- <li  class="list-group-item"><i style="color:blue; margin-right: 5px"><%= icon('circle-o fa-lg', '', class: 'icon') %></i><%= link_to 'Blue', :location %><i style="color:red;margin-right: 5px"></i><%= @blue.incidents %></li>
- <li  class="list-group-item"><i style="color:red;margin-right: 5px"><%= icon('circle-o fa-lg', ) %></i><%= link_to 'Yellow', :location %><%= @yellow.incidents %> </li>
- <li  class="list-group-item"><i style="color:green;margin-right: 5px"><%= icon('circle-o fa-lg', ) %></i><%= link_to 'Green', :location %><%= @green.incidents %> </li>
+ <li  class="list-group-item"><i style="color:red;margin-right: 10px"><%= icon('circle-o fa-3x', ) %></i><%= link_to 'Red', :location %><span style=" padding-left: 5px">
+ 	<%= @red.incidents %></span> </li>
+ <li  class="list-group-item"><i style="color:orange;margin-right: 10px"><%= icon('circle-o fa-3x', '', class: 'icon') %></i><%= link_to 'Orange', :location %><span style=" padding-left: 5px">
+ 	<%= @orange.incidents %></span></li>
+ <li  class="list-group-item"><i style="color:blue; margin-right: 10px"><%= icon('circle-o fa-3x', '', class: 'icon') %></i><%= link_to 'Blue', :location %><i style="color:red;margin-right: 5px"></i><span style=" padding-left: 5px"><%= @blue.incidents %></span></li>
+ <li  class="list-group-item"><i style="color:yellow;margin-right: 10px"><%= icon('circle-o fa-3x', ) %></i><%= link_to 'Yellow', :location %><span style=" padding-left: 5px">
+ 	<%= @yellow.incidents %></span> </li>
+ <li  class="list-group-item"><i style="color:green;margin-right: 10px"><%= icon('circle-o fa-3x', ) %></i><%= link_to 'Green', :location %><span style=" padding-left: 5px">
+ 	<%= @green.incidents %></span> </li>
 <!-- #need to add a ternary operator for each of the lines
 #if nil, eg no incidents, show the message "no incidents for this line" 
 #OR if there is an incident, show the description  -->

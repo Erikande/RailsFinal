@@ -63,8 +63,7 @@ gem 'httparty'
 #hash manipulation and consuming
 gem 'dish'
 
-#rss feed parser
-gem 'feedjira'
+
 
 #geocoding
 gem "geocoder"
